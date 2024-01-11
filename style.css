@@ -1,0 +1,1110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins';
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  
+  
+    
+
+}
+/*ici est le style de mon header*/
+header{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;/*pour enlever les scroll bar*/
+}
+
+.blocvid video{
+    position: relative;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: -100;
+}
+
+header::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 722px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.858);
+    z-index: 1;
+}
+
+
+.entete{
+   position: absolute;
+   top: 1px;
+   z-index: 2;
+   display: flex;
+   justify-content: space-between;
+  
+}
+
+nav{
+   
+    width: 85%;
+    transform: translate(170%);
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+      
+}
+
+ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+  
+ul li a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+  
+ul li::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: #1459a4;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+ ul li:hover::after {
+    width: 100%;
+}
+
+
+.chartgraphic{
+    margin-left: 22px;
+}
+
+.chartgraphic img{
+    height: 100px;
+    margin-left: 22px;
+}
+
+
+
+
+.btnanime{
+    display: flex;
+    position: relative;
+    top: 400px;
+   justify-content: center;
+   margin-left: -100px;
+}
+
+.headertext{ /*son role est de mettre les elements de facon horizontal*/
+    display: flex;  
+    position: absolute;
+    z-index: 3;
+    top: 270px;
+    margin-left: 300px;
+}
+.headertext h1{
+    color: white;
+    position: relative;
+    top: 9px;
+    margin-right: 28px;
+    font-size: 4vw;
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.headertext h2{
+    position: relative;
+    font-size: 4vw;
+    color: whitesmoke;
+    -webkit-text-stroke: 0.3vw #1459a4; /*son role est de donner des bordures au texte*/
+    text-transform: uppercase; /*son role est de mettre le text en majuscule*/
+}
+.headertext h2::before{ /*animation avant sur le titre */
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: white;
+    -webkit-text-stroke: 0vw white;/*bordure au titre ainsi que sa taille*/
+    border-right: 2px solid white;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+    filter: drop-shadow(0 0 35px #fff) drop-shadow(0 0 60px #fff);/*pour creer l'effet lumineux*/
+}
+@keyframes animate{
+    0%,10%,100%{
+        width: 0;
+    }
+    70%,90%{
+        width: 100%;
+        
+    }
+}
+
+.client{  /*style du contenaire des 2 boutons*/
+    position: absolute;
+    z-index: 5;
+    top: 500px;
+    display: flex;
+    justify-content: center;
+    margin-left: 520px;
+}
+
+.client a{
+    text-decoration: none;
+    color: white;
+}
+.login-btn {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    border: 2px solid #1459a4;
+    background: transparent;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+  
+.signup-btn {
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 30px;
+    font-weight: bold;
+    border: 2px solid #1459a4;
+    background: transparent;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+  
+.cover {
+    background: #1459a4;
+    height: 100%;
+    width: 0%;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+  
+ button:hover span {
+    width: 100%;
+}
+  
+button:hover {
+    border: none;
+}
+/*animations d'apparitions du text*/
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+.wrapper.one {
+    position: absolute;
+    top: 380px;
+    z-index: 6;
+    margin-left: 394px;
+    letter-spacing: 7px;
+}
+.drop-main {
+    display: flex;
+    font-size: 2rem;
+    padding: 11px;
+    justify-content: center;
+    font-family: "Russo One", sans-serif;
+    
+}
+.d {
+    opacity: 0;
+    animation: drop 3s linear forwards;
+    color: #1459a4;
+}
+.r {
+    opacity: 0;
+    animation: drop 4s linear forwards 0.2s;
+    color: #1459a4;
+}
+.o {
+    opacity: 0;
+    animation: drop 2s linear forwards 0.4s;
+    color: #1459a4;
+}
+.p {
+    opacity: 0;
+    animation: drop 1.6s linear forwards 0.6s;
+    color: #1459a4;
+}
+.s {
+    opacity: 0;
+    animation: drop 6s linear forwards 0.8s;
+    color: #1459a4;
+}
+@keyframes drop {
+    0% {
+        transform: translateY(-200px);
+        opacity: 0;
+        color: white;
+    }
+    50% {
+        transform: translateY(0px);
+        opacity: 1;
+        
+    }
+    65% {
+        transform: translateY(-17px);
+        opacity: 1;
+        color: white;
+    }
+    75% {
+        transform: translateY(-22px);
+        opacity: 1;
+        color: white;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+      
+    }
+}
+/*Section*/
+.container1{
+    position: absolute;
+    display: flex;
+    top: 700px;
+    z-index: 7;
+    justify-content: space-between;
+   
+}
+.sectiontxt{  /*style du contenaire de texte*/
+    font-size: 1.2rem;
+    justify-content: flex-start;
+    position: relative;
+    top: 95px;
+    margin-left: 76px;
+}
+
+.sectiontxt h1{
+    font-size: 3rem;
+   
+ }
+ .blocstat{
+    display: flex;
+    position: relative;
+    top: 43px;
+    font-size: 1.1rem;
+    
+}
+.numtxt{
+    margin-right: 31px;
+}
+.sectiontxt button{
+    position: relative;
+    top: 33px;
+    background-color: white;
+    height: 78px;
+    width: 200px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    margin-bottom: 31px;
+    color: #1459a4;
+    border: 3px solid #1459a4;
+}
+
+.sectiontxt button a{
+    text-decoration: none;
+    color: #1459A4;
+}
+
+.sectiontxt button:hover{
+    background-color: #1459a4;
+    color: white;
+    transition: 1s all ease-in-out;
+}
+
+.sectionimages{   /*style du contenaire et des 2 images*/
+    position: relative;
+    margin-left: 280px;
+    top: 70px;
+    height: 611px;
+    width: 500px;
+    background-color: #1459a4;
+}
+.sectionimages .image2{
+    height: 455px;
+    position: absolute;
+    z-index: 2;
+    top: 133px;
+    margin-left: -167px;
+    width: 550px;
+
+}
+.sectionimages .image1{
+ 
+    position: relative;
+    top: 11px;
+    height: 465px;
+    width: 550px;
+    z-index: 1;
+    margin-left: 57px;
+}
+
+/*fond image static*/
+.parel{
+    background-image: url("./images/resume-6627200_640.jpg");
+    position: relative;
+    top: 770px;
+    height: 300px;
+    width: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    
+}
+.parel img{
+    content: '';
+    background-color: black;
+    height: 300px;
+    height: 25px;
+}
+
+/*fond  d'icone apres image static*/
+
+/*animation de scroll*/
+
+
+/*section caroussel*/
+
+.blochoumi{
+    position: relative;
+    top: 770px;
+    display: flex;
+    
+}
+.contenentsect video{
+    height: 700px;
+}
+
+.blochoumitxt{
+    position: relative;
+    top: 85px;
+    
+   
+}
+
+.blochoumitxt h1{
+    font-size: 2.3rem;
+    color: #1459a4;
+    margin-left: 89px;
+}
+
+.blochoumitxt h3{
+    position: relative;
+    top: 12px;
+    font-size: 1.3rem;
+    margin-bottom: 11px;
+    margin-left: 93px;
+}
+
+
+.blochoumitxt p{
+    position: relative;
+    top: 15px;
+    margin-bottom: 11px;
+    margin-left: 93px;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+}
+
+.templates{
+    background-color: white;
+    position: relative;
+    top: 65px;
+    height: 78px;
+    width: 200px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    margin-bottom: 31px;
+    color: #1459a4;
+    border: 3px solid #1459a4;
+    margin-left: 93px;
+}
+
+.templates:hover{
+    background-color: #1459a4;
+    color: white;
+    transition: 1s all ease-in-out;
+}
+.templates a{
+    text-decoration: none;
+    color: #1459a4;
+   
+
+}
+.templates a:hover{
+    color: white;
+}
+/*la class utiliser pour l'apparition des element du site*/
+[class*="reveal-"]{ /*ici c'est un tableau pour prendreharge tous les class qui ont un reveal quelque chose*/ 
+    opacity: 0;
+    transform: translateY(-30px);
+}
+
+.reveal-visible{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 2s cubic-bezier(.5, 0, 0, 1);
+}
+
+.reveal-2{ /*ici ce sont des transition d'apparition de chaque element*/
+    transition-delay: .2s;
+}
+
+.reveal-3{ /*ici ce sont des transition d'apparition de chaque element*/
+    transition-delay: .4s;
+}
+
+.reveal-4{ /*ici ce sont des transition d'apparition de chaque element*/
+    transition-delay: .6s;
+}
+
+.reveal-5{ /*ici ce sont des transition d'apparition de chaque element*/
+    transition-delay: .7s;
+}
+
+.reveal-6{ /*ici ce sont des transition d'apparition de chaque element*/
+    transition-delay: .6s;
+}
+
+.reveal-7{
+    transition-delay: .3s;
+}
+
+
+/* ici j'ai styler notre rubrique feelback*/
+
+
+.sec-bg{
+    height: 250px;
+}
+.feelback{
+    position: relative;
+    width: 100%;
+    top: 770px;
+    text-align: center;
+
+}
+
+.feelback h1{
+    color: #1459a4;
+}
+
+.feelback p{
+    margin-bottom: 31px;
+}
+.quotes {
+    width: 80vw;
+    min-height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 2;
+   margin-left: 10%;
+   
+  }
+  
+  .quotes .box {
+    position: relative;
+    width: 25vw;
+    height: 50vh;
+    top: 43px;
+    min-height: 320px;
+    background: #f2f2f2;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 2;
+    box-sizing: border-box;
+    padding: 30px;
+    box-shadow: -10px 25px 50px rgba(0, 0, 0, 0.3);
+  }
+  
+  .quotes .box::before {  /*guillemet du bas pour le commmentaire*/
+    content: '\201C';
+    position: absolute;
+    top: -20px;
+    left: -135px;
+    width: 100%;
+    height: 100%;
+    font-size: 120px;
+    opacity: 0.2;
+    background: transparent;
+    pointer-events: none;
+  }
+  
+  .quotes .box::after {  /*guillemet du bas pour le commmentaire*/
+    content: '\201D';
+    position: absolute;
+    bottom: -10%;
+    right: 7%;
+    font-size: 120px;
+    opacity: 0.2;
+    background: transparent;
+    filter: invert(1);
+    pointer-events: none;
+  }
+  
+  .quotes .box p {
+    margin: 0;
+    padding: 10px;
+    font-size: 1.2rem;
+    position: relative;
+    top: 43px;
+  }
+  
+  .quotes .box h2 {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 4%;
+    right: 10%;
+    font-size: 1.5rem;
+  }
+  
+  .quotes .box:hover {
+    color: #f2f2f2;
+    box-shadow: 20px 50px 100px rgba(0, 0, 0, 0.5);
+  }
+  
+  .quotes .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.5s ease-in;
+    pointer-events: none;
+    width: 100%;
+    height: 200%;
+    overflow: hidden;
+  }
+  
+  .quotes .box.box1:hover,   /* background du 1er feelback on ira sur du bleu et blanc*/
+  .quotes .box.box1:hover~.bg {
+    opacity: 1;
+    background: #e2a9e5;
+  background: -moz-linear-gradient(-45deg, #1559A4 15%, #2b94e5 100%);
+  background: -webkit-linear-gradient(-45deg, #1559A4 15%,#2b94e5 100%);
+  background: linear-gradient(135deg, #1559A4 15%,#2b94e5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e2a9e5', endColorstr='#2b94e5',GradientType=1 );
+  
+  }
+  
+  .quotes .box.box2:hover,
+  .quotes .box.box2:hover~.bg {
+    opacity: 1;
+    background: #632c65;
+  background: -moz-linear-gradient(-45deg, #1559A4 15%, #1559A4 100%);
+  background: -webkit-linear-gradient(-45deg, black 15%,#1559A4 100%);
+  background: linear-gradient(135deg,  15%,#56a5e2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#632c65', endColorstr='#56a5e2',GradientType=1 );
+  }
+  
+  .quotes .box.box3:hover,
+  .quotes .box.box3:hover~.bg {
+    opacity: 1;
+    background: #4b384c;
+  background: -moz-linear-gradient(-45deg, #1559A4 15%, #2b94e5 100%);
+  background: -webkit-linear-gradient(-45deg, #1559A4 15%,#2b94e5 100%);
+  background: linear-gradient(135deg, #1559A4 15%,#2b94e5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#4b384c', endColorstr='#da5de2',GradientType=1 );
+  }
+
+.box img{
+    position: relative;
+    top: 40px;
+    height: 80px;
+}
+
+/*animation de suivie de la souris*/
+.cursor{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    top: 0;
+    border: 1px solid #1559A4;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cursor2{
+    position: fixed;
+    width: 8px;
+    height: 8px;
+    left: 0;
+    top: 0;
+    background-color: #1559A4;
+    transition: .15s;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+   
+}
+
+.cursor:hover{
+   transform: translate(-50%, -50%); scale:(1.5);
+   background-color: blue;
+   opacity: .5;
+}
+
+.cursor:hover ~ .cursor2{
+    
+    opacity: 0;
+ }
+
+
+
+/*section des notation*/
+.cont {
+    position: absolute;
+    top: 2500px;
+    font-family: Arial;
+    margin: 0 auto; /* Center website */
+    max-width: 1800px; /* Max width */
+    padding: 20px;
+  }
+  
+  .heading {
+    font-size: 25px;
+    margin-right: 25px;
+  }
+  
+  .fa {
+    font-size: 25px;
+  }
+  
+  .cont{
+    margin: 35%;
+  }
+
+  .checked {
+    color: orange;
+  }
+  
+  /* Three column layout */
+  .side {
+    float: left;
+    width: 15%;
+    margin-top: 10px;
+  }
+  
+  .middle {
+    float: left;
+    width: 70%;
+    margin-top: 10px;
+  }
+  
+  /* Place text to the right */
+  .right {
+    text-align: right;
+  }
+  
+  /* Clear floats after the columns */
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* The bar container */
+  .bar-container {
+    width: 100%;
+    background-color: #f1f1f1;
+    text-align: center;
+    color: white;
+  }
+  
+  
+  /* Individual bars */
+  .bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+  .bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+  .bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+  .bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+  .bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+  
+
+
+  /*footer du site web ON CLICK*/
+footer{
+    background-color: #1459A4;
+    position: relative;
+    top: 1200px;
+    height: 193px;
+}
+.footertxt p{
+    position: relative;
+    top: 15px;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+#barrw{
+    position: relative;
+    top: 30px;
+    width: auto;
+    margin-left: 1px;
+}
+.icon img{
+    height: 45px;
+    margin: 19px;
+    cursor: pointer;
+}
+.logo img{
+    height: 85px;
+}
+.graphiccharte{
+    display: flex;
+    justify-content: space-between;
+    margin: 51px;
+    position: relative;
+    top: -19px;
+}
+  /* Responsive layout - make the columns stack on top of each other instead of next to each other */
+  /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    /*ici est le style de mon header*/
+    header{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;/*pour enlever les scroll bar*/
+    }
+
+    .blocvid video{
+        position: relative;
+        min-height: 100%;
+        min-width: 100%;
+        z-index: -100;
+        height: 600px;
+        
+    }
+
+    header::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 602px;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.858);
+        z-index: 1;
+    }
+
+    .headertext{ /*son role est de mettre les elements de facon horizontal*/
+        display: flex;  
+        position: absolute;
+        z-index: 3;
+        top: 200px;
+        margin-left: 27px;
+    }
+    .headertext h1{
+        color: white;
+        position: relative;
+        top: 9px;
+        margin-right: 11px;
+        font-size: 3.4vw;
+        
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .headertext h2{
+        top: 6px;
+        position: relative;
+        font-size: 3.4vw;
+        color: whitesmoke;
+        -webkit-text-stroke: 0.3vw #1459a4; /*son role est de donner des bordures au texte*/
+        text-transform: uppercase; /*son role est de mettre le text en majuscule*/
+    }
+    .headertext h2::before{ /*animation avant sur le titre */
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        color: white;
+        -webkit-text-stroke: 0vw white;/*bordure au titre ainsi que sa taille*/
+        border-right: 2px solid white;
+        overflow: hidden;
+        animation: animate 6s linear infinite;
+        filter: drop-shadow(0 0 35px #fff) drop-shadow(0 0 60px #fff);/*pour creer l'effet lumineux*/
+    }
+    .chartgraphic img{
+        height: 53px;
+        margin-left: -7px;
+    }
+    .wrapper.one {
+        position: absolute;
+        top: 230px;
+        z-index: 6;
+        margin-left: 2px;
+        letter-spacing: 7px;
+
+    }
+    .drop-main {
+        display: flex;
+        font-size: 0.4rem;
+        padding: 11px;
+        justify-content: center;
+        font-family: "Russo One", sans-serif;
+        
+    }
+    .d {
+        opacity: 0;
+        animation: drop 3s linear forwards;
+        color: #1459a4;
+    }
+    .r {
+        opacity: 0;
+        animation: drop 4s linear forwards 0.2s;
+        color: #1459a4;
+    }
+    .o {
+        opacity: 0;
+        animation: drop 2s linear forwards 0.4s;
+        color: #1459a4;
+    }
+    .p {
+        opacity: 0;
+        animation: drop 1.6s linear forwards 0.6s;
+        color: #1459a4;
+    }
+    .s {
+        opacity: 0;
+        animation: drop 6s linear forwards 0.8s;
+        color: #1459a4;
+    }
+   
+    .signup-btn{
+        position: absolute;
+        top: -170px;
+
+        height: 46px;
+        margin-left: -673px;
+    }
+    
+    .signup-btn a{
+        padding: -15px;
+        text-align: center;
+        position: relative;
+        top: -8px;
+    }
+    
+    .login-btn a{
+        text-align: center;
+        position: relative;
+        top: -8px;
+   
+    }
+
+    .login-btn{
+        position: absolute;
+        top: -85px;
+
+        height: 46px;
+        margin-left: -673px;
+    }
+
+   .sectiontxt h1{
+        font-size: 1.8rem;
+        margin-left: -51px;
+        position: relative;
+        top: -151px;
+   }
+
+   .sectiontxt p{
+        position: relative;
+        top: -141px;
+      font-size: 0.9rem;
+      margin-left: -51px;
+   }
+
+   .sectiontxt button{
+    position: relative;
+    top: -125px;
+    margin-left: -51px;
+    height: 45px;
+    width: 120px;
+   }
+
+   .blocstat{
+      position: relative;
+      top: 5px;
+      
+   }
+
+   .numtxt{
+        position: relative;
+        top: 1px;
+       
+   }
+
+   .sectionimages{
+    position: relative;
+    top: 46px;
+    margin-left: 21px;
+    width: 280px;
+    height: 407px;
+   }
+
+   .sectionimages .image1 {
+      position: relative;
+      height: 227px;
+      margin-left: -81px;
+   }
+
+   
+   .sectionimages .image2 {
+    position: absolute;
+    top: 110px;
+    height: 237px;
+    margin-left: -201px;
+
+ }
+
+   .container1{
+    display: block;
+   }
+
+   /*fond image static*/
+    .parel{
+        background-image: url("./images/resume-6627200_640.jpg");
+        position: relative;
+        top: 470px;
+        height: 200px;
+        width: 74%;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 0);
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 0.8;
+        
+    }
+    .parel img{
+        content: '';
+        background-color: black;
+        height: 90px;
+        height: 25px;
+    }
+
+    .blochoumitxt{
+        position: relative;
+        top: -220px;
+        margin-left: -25%;
+        text-align: justify;
+    }
+
+    .blochoumitxt h1{
+        font-size: 2rem;
+        margin-left: -42%;
+    }
+    .houmi{
+        height: 233px;
+    }
+
+    .blochoumitxt h3{
+        font-size: 0.7rem;
+        margin-left: -42%;
+    }
+
+    .blochoumitxt p{
+        font-size: 0.7rem;
+        margin-left: -42%;
+        text-align: left;
+    }
+    
+    .sec-bg{
+        position: absolute;
+        top: 311px;
+    }
+
+    .cont{
+        position: absolute;
+        top: 3311px;
+    }
+
+    .contenentsect video{
+        position: relative;
+        top: 101px;
+        height: 349px;
+    }
+
+   .houmi{
+    display: grid;
+   }
+    footer{
+        width: 770px;
+    }
+
+    .icon{
+       
+    }
+    .icon img{
+        margin-left: 11px;
+        
+    }
+
+  
+
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}
